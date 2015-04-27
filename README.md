@@ -1,5 +1,5 @@
 # zkredis
-项目基本架构为：zookeeper+redis
+项目基本架构为：zookeeper+redis<br/>
 项目工程说明：
     1、zkredis-app为会用到redis的实际应用
     2、zkredis-detector为监控服务器
