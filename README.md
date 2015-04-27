@@ -12,4 +12,6 @@
 &nbsp;&nbsp;&nbsp;2、master故障更新zookeeper用slave替换slave<br/>
 &nbsp;&nbsp;&nbsp;3、slave故障，更新zookeeper的redis列表，移除<br/>
 &nbsp;&nbsp;&nbsp;4、每个应用启动时，内部的zk客户端都watch zookeeper的redis列表节点。同步更新本地缓。<br/>
+使用到的技术：<br/>
+&nbsp;&nbsp;&nbsp;1、springmvc，mybatis，redis，ehcache，zookeeper
   
