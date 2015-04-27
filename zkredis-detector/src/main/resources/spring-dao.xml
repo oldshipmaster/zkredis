@@ -15,7 +15,7 @@
 	<!-- 配置JNDI数据源 -->
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName">
-			<value>java:comp/env/jdbc/xtgamespay-producer</value>
+			<value>java:comp/env/jdbc/zkredis</value>
 		</property>
 	</bean>
 
@@ -45,11 +45,11 @@
 	<!-- myBatis文件,配置sessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-	<property name="configLocation" value="classpath:mybatis-consumer-config.xml"/>
+	<property name="configLocation" value="classpath:mybatis-config.xml"/>
     </bean>
     <!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
     	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="com.mq.pay.dao" />
+        <property name="basePackage" value="org.zkredis.detector" />
     </bean>
 </beans>

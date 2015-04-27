@@ -1,4 +1,4 @@
-package org.zkredis.detector.client;
+package org.zk.redis.detector.client;
 /**
  * 
  * @author captain.guo

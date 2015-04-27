@@ -1,4 +1,4 @@
-package org.zkredis.detector.common;
+package org.zk.redis.detector.common;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

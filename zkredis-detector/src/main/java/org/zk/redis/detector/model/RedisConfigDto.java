@@ -1,8 +1,9 @@
-package org.zkredis.detector.model;
+package org.zk.redis.detector.model;
 
 /**
  * 
- * @author captain.guo 每个redis连接实体
+ * @author captain.guo 
+ * 每个redis连接信息实体
  */
 public class RedisConfigDto {
 	private String host;
@@ -10,7 +11,8 @@ public class RedisConfigDto {
 	private String username;
 	private String password;
 	/** master->M,slave->S **/
-	private String MasterOrSlave;
+	private String redismode;
+	private String status;
 
 	public String getHost() {
 		return host;
@@ -44,12 +46,22 @@ public class RedisConfigDto {
 		this.password = password;
 	}
 
-	public String getMasterOrSlave() {
-		return MasterOrSlave;
+	public String getRedismode() {
+		return redismode;
 	}
 
-	public void setMasterOrSlave(String masterOrSlave) {
-		MasterOrSlave = masterOrSlave;
+	public void setRedismode(String redismode) {
+		this.redismode = redismode;
 	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
 
 }

@@ -1,4 +1,4 @@
-package org.zkredis.detector.common;
+package org.zk.redis.detector.common;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
