@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+<New class="org.eclipse.jetty.plus.jndi.Resource" id="DSTestll">
+    <Arg />
+    <Arg>java:comp/env/jdbc/xtgamespay-producer</Arg>
+    <Arg>
+        <Call id="dsbyfact" class="com.alibaba.druid.pool.DruidDataSourceFactory"
+            name="createDataSource">
+            <Arg>
+                <Map>
+                    <Entry>
+                        <Item>username</Item>
+                        <Item>
+                            <New class="java.lang.String">
+                                <Arg>xintu</Arg> 
+                            </New>
+                        </Item>
+                    </Entry>
+                    <Entry>
+                        <Item>password</Item>
+                        <Item>
+                            <New class="java.lang.String">
+                                   <Arg>xintu</Arg> 
+                            </New>
+                        </Item>
+                    </Entry>
+                    <Entry>
+                        <Item>maxActive</Item>
+                        <Item>
+                            <New class="java.lang.String">
+                                <Arg>100</Arg>
+                            </New>
+                        </Item>
+                    </Entry>
+                    <Entry>
+                        <Item>maxWait</Item>
+                        <Item>
+                            <New class="java.lang.String">
+                                <Arg>10</Arg>
+                            </New>
+                        </Item>
+                    </Entry>
+                    <Entry>
+                        <Item>testOnBorrow</Item>
+                        <Item>
+                            <New class="java.lang.String">
+                                <Arg>false</Arg>
+                            </New>
+                        </Item>
+                    </Entry>
+                     
+                    <Entry>
+                        <Item>filters</Item>
+                        <Item>
+                            <New class="java.lang.String">
+                                <Arg>stat</Arg>
+                            </New>
+                        </Item>
+                    </Entry>
+                   
+                    <Entry>
+                        <Item>url</Item>
+                        <Item>
+                            <New class="java.lang.String">
+                            <Arg>jdbc:mysql://192.168.0.198:3306/xtgamespay?useUnicode=true&amp;characterEncoding=utf8</Arg>
+                              <!--  <Arg>jdbc:mysql://192.168.0.198/xintu?useUnicode=true&amp;characterEncoding=utf8</Arg>  -->
+                          <!--            -->
+                         <!--      <Arg>jdbc:mysql://188.188.0.101:3306/wpay-overseas?useUnicode=true&amp;characterEncoding=utf8</Arg> -->
+                           <!-- <Arg>jdbc:mysql://188.188.0.101:3306/wpay-overseas?useUnicode=true&amp;characterEncoding=utf8</Arg> -->
+                            </New>
+                        </Item>
+                    </Entry>
+                </Map>
+            </Arg>
+        </Call>
+    </Arg>
+</New>
+</Configure>
