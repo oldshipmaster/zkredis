@@ -2,7 +2,7 @@
 *.class
 target
 *.classpath
-/.settings
+.settings
 *.project
 *.prefs
 
