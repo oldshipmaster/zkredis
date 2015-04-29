@@ -9,11 +9,15 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.zk.redis.detector.client.RedisClient;
 import org.zk.redis.detector.client.RedisClientPoolManager;
 import org.zk.redis.detector.dao.RedisConfigDao;
 import org.zk.redis.detector.model.RedisConfigDto;
+import org.zk.redis.detector.zookeeper.DefaultZookeeperClient;
+import org.zk.redis.detector.zookeeper.ZookeeperHandler;
+import org.zk.redis.detector.zookeeper.handler.CreateGroupNodeHandler;
 import org.zk.redis.detector.zookeeper.pool.ZookeeperPoolManager;
 
 /**
@@ -23,6 +27,7 @@ import org.zk.redis.detector.zookeeper.pool.ZookeeperPoolManager;
  */
 @Component
 public class InitThreadFactory  {
+	protected static final Logger logger = Logger.getLogger(InitThreadFactory.class);
 	@Resource
 	private RedisConfigDao redisConfigDao;
 	@Resource RedisClientPoolManager poolManager;
@@ -51,7 +56,7 @@ public class InitThreadFactory  {
 		//加载所有的redis连接信息
 		List<RedisConfigDto> list = redisConfigDao.getAll();
 		for(RedisConfigDto dto : list){
-			RedisClient client = new RedisClient(dto.getHost(),dto.getPort());
+			RedisClient client = new RedisClient(dto.getHost(),dto.getPort(),dto.getUsername(),dto.getPassword(),dto.getRedismode(),dto.getStatus());
 			RedisClientPoolManager.redisClientQueue.add(client);
 		}
 		//启动redis心跳
@@ -63,6 +68,12 @@ public class InitThreadFactory  {
 		poolManager.init();
 		//初始化zookeeper对象连接池
 		 ZookeeperPoolManager.getInstance().init();
+		 //创建父节点
+		 try {
+			DefaultZookeeperClient.getInstance().execute(new CreateGroupNodeHandler());
+		} catch (Exception e) {
+			logger.debug(e.getMessage(),e);
+		}
 		
 	}
 	

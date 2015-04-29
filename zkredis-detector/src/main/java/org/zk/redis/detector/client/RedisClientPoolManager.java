@@ -8,6 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
+import org.zk.redis.detector.model.RedisConfigZkData;
+import org.zk.redis.detector.zookeeper.DefaultZookeeperClient;
+import org.zk.redis.detector.zookeeper.handler.CreateNodeHandler;
 
 /**
  * 
@@ -40,6 +43,14 @@ public class RedisClientPoolManager {
 		public void run() {
 			while (RedisClientPoolManager.redisClientQueue.size() > 0) {
 				RedisClient client = RedisClientPoolManager.redisClientQueue.poll();
+				try {
+					DefaultZookeeperClient.getInstance().execute(new CreateNodeHandler(
+							String.valueOf(client.getPort()), 
+							new RedisConfigZkData(String.valueOf(client.getPort()), System.currentTimeMillis(), System.currentTimeMillis(), client.getHost(), String.valueOf(client.getPort())
+									, client.getUsername(), client.getPassword(), client.getRedismode(), client.getStatus(),0)));
+				} catch (Exception e) {
+					logger.debug(e.getMessage(),e);
+				}
 				if(client.getFailTimes() > 4){
 					client.setStop(false);
 				}

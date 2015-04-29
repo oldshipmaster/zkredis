@@ -72,11 +72,11 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>4.1.1.RELEASE</version>
 		</dependency>
-		<!-- zookeeper -->
+		<!-- zookeeper -->  
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId> 
-			<version>3.4.6</version>
+			<version>3.4.5</version>
 		</dependency>
 
 		<!-- mybatis -->

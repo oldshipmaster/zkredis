@@ -21,32 +21,13 @@ public class RedisClient implements Runnable {
 	private int port;
 	private boolean stop = true;
 	private int failTimes;
+	private String username;
+	private String password;
+	private String redismode;
+	private String status;
 
-	public int getPort() {
-		return port;
-	}
 
-	public void setPort(int port) {
-		this.port = port;
-	}
-
-	public int getFailTimes() {
-		return failTimes;
-	}
-
-	public void setFailTimes(int failTimes) {
-		this.failTimes = failTimes;
-	}
-
-	public boolean isStop() {
-		return stop;
-	}
-
-	public void setStop(boolean stop) {
-		this.stop = stop;
-	}
-
-	public RedisClient(String host, int port) {
+	public RedisClient(String host, int port,String username,String password,String redismode,String status) {
 		config = new JedisPoolConfig();
 		config.setMaxIdle(10);
 		config.setMaxTotal(30);
@@ -88,4 +69,69 @@ public class RedisClient implements Runnable {
 		logger.debug("stop-----finally---->" + stop);
 	}
 
+	public int getPort() {
+		return port;
+	}
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+
+	public int getFailTimes() {
+		return failTimes;
+	}
+
+	public void setFailTimes(int failTimes) {
+		this.failTimes = failTimes;
+	}
+
+	public boolean isStop() {
+		return stop;
+	}
+
+	public void setStop(boolean stop) {
+		this.stop = stop;
+	}
+
+	public String getHost() {
+		return host;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getRedismode() {
+		return redismode;
+	}
+
+	public void setRedismode(String redismode) {
+		this.redismode = redismode;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	
 }

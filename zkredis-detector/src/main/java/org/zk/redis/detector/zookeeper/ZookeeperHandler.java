@@ -9,7 +9,9 @@ import org.apache.zookeeper.ZooKeeper;
 public interface ZookeeperHandler {
 	
 	 /** ZK组节点名称 */
-    public static final String GROUP_NAME = "/REDISCONFIG";
+    public static final String GROUP_NAME = "/redisconfig";
+    /**分隔符**/
+    public static final String NODE_SEP   = "/";
     
 	public <T> T handle() throws Exception;
 
