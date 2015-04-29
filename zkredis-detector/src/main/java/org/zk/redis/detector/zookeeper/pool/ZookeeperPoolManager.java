@@ -14,8 +14,7 @@ import org.apache.zookeeper.ZooKeeper;
 
 /**
  * ZK实例池管理器
- * @author xiangqing.tan
- * @version $Id: ZookeeperPoolManager.java, v 0.1 2012-4-1 下午05:17:07 xiangqing.tan Exp $
+ * @author captain.guo
  */
 public class ZookeeperPoolManager {
     private static final Logger           LOGGER = Logger.getLogger(ZookeeperPoolManager.class);

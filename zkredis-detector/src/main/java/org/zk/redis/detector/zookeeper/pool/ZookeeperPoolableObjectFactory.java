@@ -1,7 +1,3 @@
-/**
- * Storevm.com Inc.
- * Copyright (c) 2004-2012 All Rights Reserved.
- */
 package org.zk.redis.detector.zookeeper.pool;
 
 import org.apache.commons.pool.PoolableObjectFactory;
@@ -11,9 +7,8 @@ import org.apache.zookeeper.ZooKeeper.States;
 import org.zk.redis.detector.zookeeper.ConnectionWatcher;
 
 /**
- * Zookeeper实例对象池，由于一个Zookeeper实例持有一个Socket连接，所以将Zookeeper实例池化避免实例化过程中的消耗
- * @author xiangqing.tan
- * @version $Id: ZookeeperPoolableObjectFactory.java, v 0.1 2012-4-1 下午03:52:05 xiangqing.tan Exp $
+ * Zookeeper实例对象池
+ * @author captain.guo
  */
 public class ZookeeperPoolableObjectFactory implements PoolableObjectFactory<ZooKeeper> {
     private static final Logger LOGGER = Logger.getLogger(ZookeeperPoolableObjectFactory.class);
