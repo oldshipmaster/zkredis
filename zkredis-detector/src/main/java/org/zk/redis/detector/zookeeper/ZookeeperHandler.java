@@ -3,7 +3,7 @@ package org.zk.redis.detector.zookeeper;
 import org.apache.zookeeper.ZooKeeper;
 /**
  * zookeeper客户端操作接口
- * @author Administrator
+ * @author captain.guo
  *
  */
 public interface ZookeeperHandler {
