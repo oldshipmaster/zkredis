@@ -2,10 +2,7 @@ package org.zk.redis.detector.zookeeper.handler;
 
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.ZooDefs.Ids;
 import org.apache.zookeeper.data.Stat;
-import org.zk.redis.detector.model.RedisConfigZkData;
 import org.zk.redis.detector.zookeeper.AbstractZookeeperHandler;
 
 /**

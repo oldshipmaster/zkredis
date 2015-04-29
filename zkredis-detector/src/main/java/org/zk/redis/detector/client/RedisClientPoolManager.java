@@ -52,6 +52,7 @@ public class RedisClientPoolManager {
 					logger.debug(e.getMessage(),e);
 				}
 				if(client.getFailTimes() > 4){
+					//从zookeeper里面移除掉当前的redis配置
 					client.setStop(false);
 				}
 			}
