@@ -16,18 +16,18 @@
         <property name="configLocation" value="classpath:ehcache.xml"/>
     </bean>
     
-    <bean id="cacheProvider" class="com.mq.pay.cache.ehcache.CacheProvider">
+    <bean id="cacheProvider" class="org.zk.redis.detector.ehcache.CacheProvider">
 		<property name="cacheManager" ref="ehcacheManager"/>
 	</bean>
 	
-	<bean id="methodCacheInterceptor" class="com.mq.pay.cache.ehcache.MethodCacheInterceptor">
+	<bean id="methodCacheInterceptor" class="org.zk.redis.detector.ehcache.MethodCacheInterceptor">
 		<property name="cacheProvider" ref="cacheProvider"/>
 	</bean>
 
-	<bean id="ehcacheAdvisor" class="com.mq.pay.cache.ehcache.AnnotationMethodPointcutAdvisor">
+	<bean id="ehcacheAdvisor" class="org.zk.redis.detector.ehcache.AnnotationMethodPointcutAdvisor">
 		<property name="advice" ref="methodCacheInterceptor"/>
 		<property name="annotationCls">
-			<value>com.mq.pay.cache.ehcache.UseCache</value>
+			<value>org.zk.redis.detector.ehcache.UseCache</value>
 		</property>
 	</bean>
 	

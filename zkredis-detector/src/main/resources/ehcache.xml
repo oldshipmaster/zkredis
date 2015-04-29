@@ -3,7 +3,7 @@
 	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false"
 	monitoring="autodetect">
 	<diskStore path="java.io.tmpdir" /> 
-	<!--<diskStore path="F:/cachetmpdir"/>-->
+	<!-- <diskStore path="F:/cachetmpdir"/> -->
 
 	<defaultCache maxElementsInMemory="10000" eternal="false"
 		timeToIdleSeconds="1800000" timeToLiveSeconds="1800000" overflowToDisk="true"

@@ -1,0 +1,1743 @@
+@charset "utf-8"; 
+
+* {
+	padding: 0;
+	margin: 0
+}
+
+body {
+	color: #666;
+	font-size: 14px;
+	background: #f4f4f4;
+	font-family: "\5FAE\8F6F\96C5\9ED1", Gotham-Medium, Helvetica, Arial
+}
+
+a {
+	text-decoration: none
+}
+
+a:hover, a:active, a:link {
+	
+}
+
+li, ul {
+	list-style-type: none
+}
+
+img {
+	border: 0
+}
+
+.bg-white {
+	background: #fff
+}
+
+.color-gray {
+	color: #bcbcbc !important
+}
+
+.blue, a.blue {
+	color: #3498d8
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0
+}
+
+.clearfix {
+	zoom: 1
+}
+
+header {
+	height: 45px;
+	width: 100%;
+	background: #1e90d9;
+	overflow: hidden;
+	text-align: center;
+	border-bottom: 1px solid #329bde
+}
+
+header span {
+	color: #fff;
+	font-size: 18px;
+	line-height: 45px;
+	letter-spacing: 1px
+}
+
+header em {
+	position: absolute;
+	right: 10px;
+	top: 13px;
+	font-size: 12px;
+	color: #fff;
+	font-style: normal
+}
+
+header em a {
+	color: #fff !important
+}
+
+.back {
+	width: 40px;
+	height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/back_5c193b5.png)
+		no-repeat center center;
+	background-size: 9px 15px
+}
+
+.home {
+	width: 40px;
+	height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/home_d8120e0.png)
+		no-repeat center center;
+	background-size: 20px 20px
+}
+
+.resetpass {
+	width: 40px;
+	height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/home_d8120e0.png)
+		no-repeat center center;
+	background-size: 20px 20px
+}
+
+.login {
+	margin: 25px 16px 20px;
+	border: 1px solid #d3d3d3;
+	background: #fff;
+	border-radius: 4px
+}
+
+.login li {
+	height: 42px;
+	border-top: 1px solid #d3d3d3;
+	box-sizing: border-box;
+	padding: 0 25px 0 36px;
+	position: relative
+}
+
+.login li:first-child {
+	border-top: 0
+}
+
+.login li.user {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_user_e71f59e.png)
+		no-repeat 7px center;
+	background-size: 21px 21px
+}
+
+.login li.password {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_password_7a990fe.png)
+		no-repeat 7px center;
+	background-size: 21px 21px
+}
+
+.login li.code {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_code_7b15f3e.png)
+		no-repeat 7px center;
+	background-size: 21px 21px;
+	padding-right: 90px
+}
+
+.login li.imei {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_imei_d5cc2cf.png)
+		no-repeat 7px center;
+	background-size: 21px 21px;
+	padding-right: 90px
+}
+
+.login li.mobile {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_phone_e9131ac.png)
+		no-repeat 7px center;
+	background-size: 21px 21px
+}
+
+.login li.email {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_email_88c3e86.png)
+		no-repeat 7px center;
+	background-size: 21px 21px
+}
+
+.login li.round {
+	padding: 0 25px !important
+}
+
+.login li.round:before {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	left: 10px;
+	top: 18px;
+	background: #0fcf60;
+	border-radius: 100%
+}
+
+.login li.round:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 8px;
+	top: 19px;
+	border: 7px solid;
+	border-color: #d3d3d3 transparent transparent
+}
+
+.login li.round_1 {
+	padding: 0 25px !important
+}
+
+.login li.round_1:before {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	left: 10px;
+	top: 18px;
+	background: #0fcf60;
+	border-radius: 100%
+}
+
+.login li.code span {
+	position: absolute;
+	width: 78px;
+	height: 26px;
+	top: 7px;
+	right: 8px
+}
+
+.login li.code a {
+	position: absolute;
+	top: 12px;
+	border-left: 1px #eaeaea solid;
+	color: #52ade7;
+	font-size: 13px;
+	display: inline-block;
+	padding: 0 0 0 13px;
+	height: 20px;
+	line-height: 20px
+}
+
+.login li.code span img {
+	width: 100%;
+	height: 100%
+}
+
+.login li.password input[type=text] {
+	display: none
+}
+
+.login li em, .msg-del, .msg-ok, .msg-waring {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 30px;
+	height: 30px
+}
+
+.msg-del, .mobile-msg-del, .password-msg-del, .newPassword-msg-del,
+	newPassword2-msg-del, .email-msg-del, .loginName-msg-del,
+	.userName-msg-del, .nickname-msg-del {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_del_fab931e.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.msg-ok, .mobile-msg-ok, .password-msg-ok, .newPassword-msg-ok,
+	.newPassword2-msg-ok, .email-msg-ok, .loginName-msg-ok,
+	.userName-msg-ok, .nickname-msg-ok {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_ok_762223f.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.msg-waring, .mobile-msg-waring, .password-msg-waring,
+	.newPassword-msg-waring, .newPassword2-msg-waring, email-msg-waring,
+	.loginName-msg-waring, .userName-msg-waring, .nickname-msg-waring {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_waring_f088597.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.msg-arrow-d, .msg-arrow-u {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px
+}
+
+.smsCode-msg-waring {
+	position: absolute;
+	top: 5px;
+	right: 95px;
+	width: 30px;
+	height: 30px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_waring_f088597.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.smsCode-msg-ok {
+	position: absolute;
+	top: 5px;
+	right: 95px;
+	width: 30px;
+	height: 30px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_ok_762223f.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.smsCode-msg-del {
+	position: absolute;
+	top: 5px;
+	right: 95px;
+	width: 30px;
+	height: 30px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_del_fab931e.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.msg-arrow-d:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 6px;
+	top: 13px;
+	border: 7px solid;
+	border-color: #d3d3d3 transparent transparent
+}
+
+.msg-arrow-u:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 6px;
+	top: 6px;
+	border: 7px solid;
+	border-color: transparent transparent #d3d3d3
+}
+
+.list-user {
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	top: 43px;
+	left: -1px;
+	z-index: 100;
+	box-shadow: 0 1px 3px rgba(200, 200, 200, .3);
+	border: 1px #ebebeb solid
+}
+
+.list-user p {
+	padding: 8px 2px 8px 15px;
+	font-size: 14px;
+	border-bottom: 1px #ebebeb solid
+}
+
+.list-user p span {
+	float: right;
+	width: 30px;
+	height: 26px;
+	line-height: 26px;
+	font-size: 16px;
+	color: #989898;
+	text-align: center
+}
+
+.login li input[type=text], .login li input[type=password] {
+	line-height: 22px;
+	padding: 9px 0;
+	font-size: 14px;
+	width: 100%;
+	border: 0;
+	outline: 0
+}
+
+.btnpar {
+	margin: 16px
+}
+
+.btn {
+	-webkit-appearance: none;
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #329bde;
+	border-radius: 3px;
+	background: #52ade7;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 1px;
+	outline: 0;
+	width: 100%
+}
+
+.btn-dis, .btn-blue {
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 3px;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 1px;
+	outline: 0;
+	width: 48%
+}
+
+.btn-dis {
+	border: 1px solid #b7b7b7;
+	background: #bebebe;
+	float: left
+}
+
+.btn-blue {
+	border: 1px solid #329bde;
+	background: #52ade7;
+	float: right
+}
+
+.waring {
+	margin: 16px;
+	text-align: center;
+	font-size: 13px;
+	color: #fff;
+	background: #de3233;
+	border-radius: 3px;
+	line-height: 28px
+}
+
+.waring span {
+	display: inline-block;
+	margin-right: 6px;
+	width: 16px;
+	height: 16px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_waring2_a632213.png);
+	background-size: 16px 16px;
+	vertical-align: -3px
+}
+
+.oper {
+	margin-top: 23px;
+	text-align: center;
+	font-size: 13px
+}
+
+.oper span {
+	margin: 0 10px;
+	color: #dedede;
+	font-size: 12px
+}
+
+.cooper {
+	margin: 40px 16px 20px;
+	height: 12px;
+	text-align: center;
+	border-bottom: 1px #ececec solid
+}
+
+.cooper span {
+	padding: 0 8px;
+	font-size: 12px;
+	color: #a6a6a6;
+	background: #fff
+}
+
+.list-cooper {
+	margin: 20px 0;
+	text-align: center
+}
+
+.list-cooper a {
+	margin: 0 20px
+}
+
+.list-cooper img {
+	width: 43px;
+	height: 43px
+}
+
+.suc-tips {
+	margin-top: 30px;
+	text-align: center;
+	color: #333
+}
+
+.suc-tips img {
+	width: 25px;
+	height: 25px;
+	vertical-align: -6px
+}
+
+.suc-set-tips {
+	text-align: center;
+	color: #a6a6a6;
+	font-size: 14px;
+	margin: 10px
+}
+
+.suc-btn {
+	margin: 10px 16px 20px
+}
+
+.reg-suc-info, .reg-login {
+	margin: 25px 16px 20px;
+	border: 1px solid #d3d3d3;
+	background: #fff;
+	border-radius: 4px
+}
+
+.reg-suc-info li, .reg-login li {
+	height: 44px;
+	border-top: 1px solid #d3d3d3;
+	box-sizing: border-box;
+	padding: 11px 10px 11px 0;
+	position: relative
+}
+
+.reg-suc-info li span {
+	display: inline-block;
+	width: 72px;
+	height: 20px;
+	text-align: center;
+	color: #bbb
+}
+
+.reg-suc-info li:first-child, .reg-login li:first-child {
+	border-top: 0
+}
+
+.reg-login {
+	margin: 10px 16px 20px
+}
+
+.reg-login li {
+	padding: 11px 10px 11px 70px
+}
+
+.reg-login li span {
+	position: absolute;
+	left: 13px;
+	display: inline-block
+}
+
+.reg-login li input.input {
+	background: #fff;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0)
+}
+
+.text-id, .text-tips {
+	font-size: 13px;
+	color: #666;
+	margin: 20px 24px 0
+}
+
+.text-tips {
+	margin: 25px 24px -10px
+}
+
+.text-tips span {
+	color: #bbb
+}
+
+.top {
+	background: #1e90d9;
+	height: 184px;
+	text-align: center;
+	color: #94c1e9;
+	font-size: 13px;
+	position: relative
+}
+
+.top h1 {
+	font-size: 18px;
+	color: #fff;
+	font-weight: 400;
+	padding: 12px 0
+}
+
+.top em {
+	position: absolute;
+	left: 10px;
+	top: 13px
+}
+
+a.back-app {
+	display: inline-block;
+	padding: 5px;
+	font-size: 15px;
+	color: #d2e9f7;
+	position: absolute;
+	top: 7px;
+	right: 10px
+}
+
+.step {
+	background: #e8e8e8;
+	border-bottom: 1px #d9d9d9 solid;
+	padding: 15px 12px;
+	font-size: 12px
+}
+
+.step1, .step2, .step3 {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/step_ec2c3fe.png)
+		no-repeat;
+	background-size: 276px 142px;
+	background-position: 50% 0;
+	width: 300px;
+	margin: 0 auto
+}
+
+.step1 {
+	background-size: 276px 142px
+}
+
+.step2 {
+	background-position: 50% -61px
+}
+
+.step3 {
+	background-position: 50% -122px
+}
+
+.step1 li, .step2 li, .step3 li {
+	float: left;
+	padding: 29px 0 0;
+	text-align: left;
+	color: #1e90d9
+}
+
+.step1 li:nth-child(2), .step2 li:nth-child(2), .step3 li:nth-child(2) {
+	padding: 29px 90px 0 78px
+}
+
+.step1 li:nth-child(2), .step1 li:nth-child(3), .step2 li:nth-child(3) {
+	color: #bebebe
+}
+
+.msg-succeed {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/ico_succeed_5bd6c2f.png)
+		no-repeat center 0;
+	margin: 60px 0;
+	color: #333;
+	font-size: 14px;
+	background-size: 54px 54px;
+	text-align: center;
+	padding-top: 68px
+}
+
+.msg-fail {
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/ico_f_e90f24d.png)
+		no-repeat center 0;
+	margin: 60px 0;
+	color: #333;
+	font-size: 14px;
+	background-size: 54px 54px;
+	text-align: center;
+	padding-top: 68px
+}
+
+.msg {
+	padding: 13px 26px 11px
+}
+
+.msg p {
+	font-size: 12px;
+	color: #999;
+	margin: 10px 0;
+	line-height: 20px
+}
+
+.msg-text {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 26px
+}
+
+.msg-text a {
+	font-size: 15px;
+	color: #3498d8;
+	margin-left: 5px
+}
+
+.msg .hint {
+	font-size: 12px;
+	color: #999
+}
+
+.msg .hint li {
+	padding: 10px 0 0 6px;
+	position: relative
+}
+
+.msg .hint li:before {
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 17px;
+	width: 2px;
+	height: 2px;
+	border-radius: 5px;
+	background: #999
+}
+
+.msg .hint li a {
+	color: #3498d8
+}
+
+.msg .inf {
+	text-align: center;
+	padding: 10px 0 20px;
+	color: #333;
+	font-size: 16px
+}
+
+.msg .inf img {
+	vertical-align: -3px;
+	width: 20px;
+	padding-right: 10px
+}
+
+.text-gray {
+	color: #999;
+	font-size: 12px;
+	margin: 15px 24px 0
+}
+
+.binding li {
+	border-bottom: 1px #d3d3d3 solid;
+	padding: 10px 15px;
+	font-size: 13px;
+	color: #afafaf
+}
+
+.binding li span {
+	font-size: 16px;
+	color: #666;
+	display: inline-block;
+	margin-bottom: 5px
+}
+
+.binding li img {
+	vertical-align: -25px;
+	float: left;
+	margin-right: 18px
+}
+
+.binding li em {
+	float: right;
+	font-style: normal;
+	color: #fff;
+	margin-top: 6px
+}
+
+.binding li em a {
+	display: inline-block;
+	color: #fff;
+	border-radius: 3px;
+	width: 56px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	text-align: center
+}
+
+.binding li em a.btn {
+	background: #52ade7;
+	border: 1px #369ddf solid
+}
+
+.binding li em a.btn-red {
+	background: #e74c3c;
+	border: 1px #c0392b solid
+}
+
+.tips-small {
+	font-size: 12px;
+	text-align: center;
+	color: #666;
+	margin: 40% 0 10px
+}
+
+.avatar {
+	margin: auto;
+	margin-bottom: 5px;
+	padding: 5px;
+	width: 88px;
+	height: 86px;
+	border-radius: 100%;
+	border: 1px rgba(255, 255, 255, .1) solid
+}
+
+.avatar p {
+	margin: auto;
+	padding: 3px 3px 2px;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	border: 1px rgba(255, 255, 255, .2) solid
+}
+
+.avatar img {
+	width: 80px;
+	height: 80px;
+	border-radius: 80px
+}
+
+.select {
+	width: 100%;
+	height: 42px;
+	color: #999;
+	font-size: 15px;
+	border: 0;
+	background: transparent;
+	outline: 0;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0)
+}
+
+.pass-safe {
+	margin: 15px 16px 20px;
+	border: 1px solid #d3d3d3;
+	background: #fff;
+	border-radius: 4px
+}
+
+.pass-safe li {
+	height: 44px;
+	border-top: 1px solid #d3d3d3;
+	box-sizing: border-box;
+	padding: 11px 10px 11px 0;
+	position: relative
+}
+
+.pass-safe li span {
+	display: inline-block;
+	width: 56px;
+	height: 20px;
+	text-align: center;
+	color: #bbb
+}
+
+.pass-safe li:first-child {
+	border-top: 0;
+	color: #bbb
+}
+
+.input-noline {
+	-webkit-box-sizing: border-box;
+	padding: 3px 0 5px 8px;
+	width: 100%;
+	color: #666;
+	font-size: 14px;
+	border: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0)
+}
+
+.mycener-header {
+	padding-top: 22px;
+	height: 90px;
+	color: #fff;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/bg_light_1d48378.png)
+		left no-repeat,
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/banner_6410254.png)
+		right no-repeat #2190d7;
+	background-size: 320px 112px, 320px 112px;
+	position: relative
+}
+
+.mycener-header .avatav {
+	float: left;
+	margin-left: 20px;
+	width: 68px;
+	height: 68px;
+	position: relative
+}
+
+.mycener-header .avatav:before {
+	position: absolute;
+	content: "";
+	left: -3px;
+	top: -4px;
+	width: 72px;
+	height: 72px;
+	border-radius: 100%;
+	border: 1px rgba(255, 255, 255, .2) solid
+}
+
+.mycener-header .avatav:after {
+	position: absolute;
+	content: "";
+	left: -8px;
+	top: -9px;
+	width: 82px;
+	height: 82px;
+	border-radius: 100%;
+	border: 1px rgba(255, 255, 255, .1) solid
+}
+
+.mycener-header .avatav img {
+	width: 68px;
+	height: 68px;
+	border-radius: 100%
+}
+
+.mycener-header .info {
+	margin-left: 102px;
+	padding-top: 9px
+}
+
+.mycener-header .info h2 {
+	font-size: 20px;
+	font-weight: 400
+}
+
+.mycener-header .info p {
+	font-size: 13px;
+	color: #bddff4
+}
+
+.mycener-header .btn-edit {
+	width: 20px;
+	height: 20px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/ico_edit_d45e9af.png);
+	background-size: 20px 20px;
+	position: absolute;
+	top: 43px;
+	right: 12px
+}
+
+.mycener-t {
+	margin: 15px 15px 8px;
+	font-size: 13px;
+	color: #999
+}
+
+.mycener {
+	margin: 0 12px 20px;
+	border: 1px solid #d3d3d3;
+	background: #fff;
+	border-radius: 4px
+}
+
+.mycener li {
+	border-top: 1px solid #d3d3d3;
+	box-sizing: border-box;
+	padding: 11px 10px 11px 0;
+	position: relative
+}
+
+.mycener li:after {
+	content: "";
+	width: 7px;
+	height: 7px;
+	border-top: 2px #ccc solid;
+	border-right: 2px #ccc solid;
+	position: absolute;
+	top: 22px;
+	right: 10px;
+	-webkit-transform: rotate(45deg)
+}
+
+.mycener li:first-child {
+	border-top: 0
+}
+
+.mycener .txt p:nth-child(1) {
+	padding-bottom: 2px;
+	font-size: 14px
+}
+
+.mycener .txt p:nth-child(1) span {
+	margin-left: 10px;
+	font-size: 12px;
+	color: #999
+}
+
+.mycener .txt p:nth-child(2) {
+	font-size: 12px;
+	color: #ccc
+}
+
+.mycener .ico {
+	float: left;
+	width: 50px;
+	height: 45px;
+	background-image:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/1_305744d.png);
+	background-repeat: no-repeat;
+	background-size: 125px 214px
+}
+
+.mycener .ico-pass {
+	background-position: 12px 5px
+}
+
+.mycener .ico-mobile-r {
+	background-position: 11px -59px
+}
+
+.mycener .ico-mobile-f {
+	background-position: -36px -58px
+}
+
+.mycener .ico-mail-r {
+	background-position: 11px -126px
+}
+
+.mycener .ico-mail-f {
+	background-position: -36px -126px
+}
+
+.mycener .ico-safe {
+	background-position: 12px -188px
+}
+
+.mycener {
+	margin: 0 12px 20px;
+	border: 1px solid #d3d3d3;
+	background: #fff;
+	border-radius: 4px
+}
+
+.list-myavatar {
+	margin: 20px 10px
+}
+
+.list-myavatar li {
+	float: left;
+	width: 25%;
+	height: 76px
+}
+
+.list-myavatar li div {
+	margin: auto;
+	padding: 2px;
+	width: 64px;
+	height: 64px;
+	position: relative
+}
+
+.list-myavatar li div.sel {
+	padding: 0;
+	border: 2px #fff solid;
+	border-radius: 5px
+}
+
+.list-myavatar li div.sel span {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: #0ecf60
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/checked_546d273.png)
+		center;
+	background-size: 15px 15px;
+	border: 2px #f4f4f4 solid;
+	border-radius: 16px;
+	position: absolute;
+	right: -6px;
+	bottom: -6px
+}
+
+.list-myavatar li div.sel img {
+	opacity: .5
+}
+
+.list-myavatar li img {
+	width: 64px;
+	height: 64px;
+	border-radius: 5px
+}
+
+.list-myavatar li:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0
+}
+
+.list-myavatar li {
+	zoom: 1
+}
+
+.other {
+	display: -webkit-box;
+	margin: 0 12px 20px;
+	height: 65px;
+	border: 1px solid #d3d3d3;
+	background: #fff;
+	border-radius: 4px
+}
+
+.other li {
+	display: -webkit-box;
+	width: 25%;
+	height: 65px;
+	font-size: 12px;
+	-webkit-box-flex: 1;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	border-right: 1px #e0e0e0 solid;
+	position: relative
+}
+
+.other li.hot:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border: 12px solid;
+	border-color: #e74c3c #e74c3c transparent transparent;
+	position: absolute;
+	top: 0;
+	right: 0
+}
+
+.other li.hot:after {
+	content: "HOT";
+	color: #fff;
+	font-size: 8px;
+	position: absolute;
+	top: 5px;
+	right: 1px;
+	-webkit-transform: rotate(45deg)
+}
+
+.other li:last-child {
+	border-right: 0
+}
+
+.other .ico {
+	margin: auto;
+	width: 40px;
+	height: 40px;
+	background-image:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/user_0d49f3c.png);
+	background-repeat: no-repeat;
+	background-size: 325px 29px
+}
+
+.other .ico-three {
+	background-position: 6px 9px
+}
+
+.other .ico-weixin {
+	background-position: -94px 9px
+}
+
+.other .ico-exp {
+	background-position: -195px 9px
+}
+
+.other .ico-disk {
+	background-position: -291px 10px
+}
+
+.green {
+	color: #0ecf60 !important
+}
+
+.red {
+	color: #f05f50 !important
+}
+
+.orange {
+	color: #f08300 !important
+}
+
+.footer {
+	margin: 15px 0;
+	text-align: center;
+	font-size: 12px;
+	color: #dedede
+}
+
+.footer p {
+	padding-bottom: 6px;
+	font-size: 13px
+}
+
+.footer a {
+	margin: 0 8px;
+	color: #8f8f8f
+}
+
+.captchaVal-msg-waring {
+	position: absolute;
+	top: 5px;
+	right: 80px;
+	width: 30px;
+	height: 30px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_waring_f088597.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.captchaVal-msg-ok {
+	position: absolute;
+	top: 5px;
+	right: 80px;
+	width: 30px;
+	height: 30px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_ok_762223f.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.captchaVal-msg-del {
+	position: absolute;
+	top: 5px;
+	right: 80px;
+	width: 30px;
+	height: 30px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/icon_del_fab931e.png)
+		no-repeat center;
+	background-size: 21px 21px
+}
+
+.ucmask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .55);
+	z-index: 100
+}
+
+.ucpop {
+	margin: -90px 0 0 -135px;
+	width: 270px;
+	position: fixed;
+	top: 45%;
+	left: 50%;
+	z-index: 101
+}
+
+.ucpop dt {
+	padding: 8px 0;
+	text-align: center;
+	font-size: 17px;
+	color: #fff;
+	background: #1e90d9;
+	border-radius: 3px 3px 0 0
+}
+
+.ucpop dd {
+	padding: 20px 15px 15px;
+	background: #fff;
+	border-radius: 0 0 3px 3px
+}
+
+.btn-pop {
+	margin-top: 10px;
+	height: 32px
+}
+
+.fl-r {
+	float: right
+}
+
+.btn-blue-s {
+	min-width: 110px;
+	height: 30px;
+	padding: 0 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	font-family: inherit;
+	border: 0;
+	background: #52ade7;
+	border-radius: 3px
+}
+
+.btn-gray-s {
+	min-width: 110px;
+	height: 30px;
+	padding: 0 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	border: 0;
+	background: #bebebe;
+	border-radius: 3px
+}
+
+.turn {
+	margin-top: -60px;
+	width: 100%;
+	text-align: center;
+	color: #666;
+	font-size: 16px;
+	position: absolute;
+	top: 40%;
+	left: 0
+}
+
+.txt-en {
+	margin-top: 2px;
+	font-size: 13px;
+	color: #c4c4c4
+}
+
+a.btn-turn {
+	display: inline-block;
+	min-width: 150px;
+	padding: 8px;
+	color: #fff;
+	font-size: 14px;
+	background: #52ade7;
+	border: 1px #329bde solid;
+	border-radius: 3px
+}
+
+a.btn-turn span {
+	margin-left: 5px;
+	font-size: 12px;
+	color: #badef5
+}
+
+.tips-img {
+	margin-bottom: 20px
+}
+
+.tips-img img {
+	width: 73px;
+	height: 79px
+}
+
+.tips-footer {
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+	position: absolute;
+	bottom: 15px;
+	left: 0
+}
+
+.ico-password {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/show_pass_d13c914.png)
+		4px -66px no-repeat;
+	background-size: 18px 90px;
+	position: absolute;
+	top: 7px;
+	right: 2px
+}
+
+.ico-read-no {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/show_pass_d13c914.png)
+		4px 8px no-repeat;
+	background-size: 18px 63px;
+	position: absolute;
+	top: 7px;
+	right: 2px
+}
+
+.ico-read {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background:
+		url(//img0.u.ucfly.com/uop/sso/public/images/next/zh/mobile/html5/authenticate/show_pass_d13c914.png)
+		4px -21px no-repeat;
+	background-size: 18px 63px;
+	position: absolute;
+	top: 7px;
+	right: 2px
+}
+
+.ico-ok {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background: url(/public/images/next/zh/mobile/html5/show_pass.png) 1px
+		-57px no-repeat;
+	background-size: 22px 76px;
+	position: absolute;
+	top: 7px;
+	right: 2px
+}
+
+.tips-header {
+	padding: 40px 0;
+	text-align: center
+}
+
+.tips-header img {
+	width: 46px;
+	height: 46px
+}
+
+.tips-black {
+	margin-top: 5px;
+	font-size: 16px;
+	color: #333
+}
+
+.tips-gray {
+	font-size: 13px;
+	color: #999
+}
+
+.wrap {
+	margin: 0 15px
+}
+
+.wrap li {
+	margin-bottom: 20px;
+	font-size: 13px;
+	position: relative
+}
+
+.btn-send {
+	width: 65px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	background: #52ade7;
+	border: 1px #369ddf solid;
+	border-radius: 3px;
+	position: absolute;
+	top: 3px;
+	right: 0
+}
+
+.exp {
+	padding: 15px 26px 5px
+}
+
+.exp p {
+	margin: 10px 0;
+	line-height: 20px
+}
+
+.exp span {
+	color: #999
+}
+
+.appeal .t {
+	margin-top: 10px;
+	font-size: 13px;
+	color: #000
+}
+
+.appeal p {
+	padding: 10px 0;
+	line-height: 22px;
+	border-bottom: 1px #e1e1e1 solid
+}
+
+.appeal b {
+	font-weight: 400;
+	color: #222
+}
+
+.appeal a {
+	color: #666
+}
+
+a.btn-back {
+	display: block;
+	margin: 0 12px 20px;
+	padding: 10px 0;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+	border: 1px solid #d3d3d3;
+	background: #fff;
+	border-radius: 4px
+}
+
+.text-error-tips {
+	font-size: 13px;
+	color: #666;
+	margin: 10px 24px 0
+}
+
+.downuc {
+	width: 100%;
+	height: 40px;
+	background: rgba(0, 0, 0, .75);
+	position: fixed;
+	left: 0;
+	bottom: 0
+}
+
+.downuc div {
+	padding: 5px 0;
+	line-height: 32px;
+	color: #fff;
+	position: relative;
+	overflow: hidden
+}
+
+.downuc .btn-close {
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	text-indent: 8px;
+	color: #fff;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 29px;
+	border-radius: 15px;
+	background: #616161;
+	right: -8px;
+	top: -8px
+}
+
+.downuc span {
+	margin-left: 10px;
+	font-size: 13px
+}
+
+.downuc a {
+	float: right;
+	display: inline-block;
+	margin-right: 25px;
+	padding: 0 10px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #fff;
+	background: #329bde;
+	border-radius: 3px
+}
+
+.downuc a img {
+	margin-right: 5px;
+	width: 18px;
+	height: 18px;
+	vertical-align: -2px
+}
+
+.text-gray-center {
+	margin: 15px 24px 0;
+	text-align: center;
+	font-size: 14px;
+	color: #999
+}
+
+.avatar-round {
+	margin: 10px 0;
+	text-align: center
+}
+
+.avatar-round img {
+	width: 70px;
+	height: 70px;
+	border-radius: 70px
+}
+
+.btn-close {
+	width: 40px;
+	height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/close.png) no-repeat center center;
+	background-size: 15px 15px
+}
+
+.list-note {
+	padding: 0 18px 30px;
+	line-height: 22px
+}
+
+.list-note p {
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: 400
+}
+
+.list-note a {
+	color: #1e90d9
+}
+
+.find-pass-txt {
+	display: -webkit-box;
+	min-height: 35px;
+	-webkit-box-align: center
+}
+
+.find-pass-txt span {
+	margin-left: 10px;
+	font-size: 12px;
+	color: #999
+}
+
+.find-pass-ico-mobile {
+	background-position: -86px -57px
+}
+
+.find-pass-ico-mail {
+	background-position: -86px -124px
+}
+
+.mycener li em {
+	display: none
+}
+
+.recom em {
+	position: absolute;
+	left: 1px;
+	top: 2px;
+	display: block !important;
+	font: 9px/9px normal;
+	color: #fff
+}
+
+.recom:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 0;
+	height: 0;
+	font-size: 10px;
+	color: #fff;
+	border: 10px solid;
+	border-color: #cf2121 #cf2121 transparent transparent;
+	border-radius: 0 3px 0 0;
+	-webkit-transform: rotate(-90deg)
+}
+
+.wx-txt {
+	margin: 15px 15px 30px;
+	line-height: 24px;
+	font-size: 15px
+}
+
+.wx-txt a {
+	color: #3498d8
+}
+
+.wx-tips {
+	position: relative;
+	margin: 0 12px;
+	padding: 15px 10px 10px;
+	line-height: 20px;
+	color: #999;
+	font-size: 12px;
+	border: 1px #d6d6d6 solid;
+	border-radius: 3px
+}
+
+.wx-tips-t {
+	position: absolute;
+	top: -16px;
+	left: 10px;
+	display: block;
+	padding: 5px 6px;
+	color: #666;
+	background: #f4f4f4
+}
+
+.wx-tips-t span {
+	position: relative;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 4px;
+	background: #999;
+	border-radius: 50%;
+	vertical-align: -2px
+}
+
+.wx-tips-t span:after {
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	content: "";
+	width: 2px;
+	height: 5px;
+	background: #fff
+}
+
+.wx-tips-t span:before {
+	position: absolute;
+	bottom: 2px;
+	left: 6px;
+	content: "";
+	width: 2px;
+	height: 2px;
+	background: #fff
+}
+
+.list-record {
+	margin: 0 12px 20px
+}
+
+.list-record li {
+	margin-bottom: 6px;
+	padding: 10px 15px;
+	line-height: 22px;
+	color: #666;
+	border: 1px #e0e0e0 solid;
+	border-radius: 3px;
+	background: #fff
+}
+
+.list-record li span {
+	color: #999
+}

@@ -1,13 +1,20 @@
 package org.zk.redis.detector.common;
 
+import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
+import org.zk.redis.detector.client.RedisClient;
+import org.zk.redis.detector.client.RedisClientPoolManager;
+import org.zk.redis.detector.dao.RedisConfigDao;
+import org.zk.redis.detector.model.RedisConfigDto;
+import org.zk.redis.detector.zookeeper.pool.ZookeeperPoolManager;
 
 /**
  * 
@@ -16,7 +23,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class InitThreadFactory  {
-	
+	@Resource
+	private RedisConfigDao redisConfigDao;
+	@Resource RedisClientPoolManager poolManager;
 	public static final int THREADPOOL_MAX_SIZE   = 25;
 	public static final int THREADPOOL_KEEP_ALIVE = 30;
 	private static volatile int THREAD_INDEX = 1;
@@ -35,11 +44,26 @@ public class InitThreadFactory  {
 		}
 	});
 	
+	
+	
 	@PostConstruct 
 	public void doWorks(){
-		for(int i = 0;i <2;i++){
-			THREAD_EXECUTOR.execute(new ThreadWork());
+		//加载所有的redis连接信息
+		List<RedisConfigDto> list = redisConfigDao.getAll();
+		for(RedisConfigDto dto : list){
+			RedisClient client = new RedisClient(dto.getHost(),dto.getPort());
+			RedisClientPoolManager.redisClientQueue.add(client);
 		}
+		//启动redis心跳
+		while (RedisClientPoolManager.redisClientQueue.size() > 0) {
+			RedisClient client = RedisClientPoolManager.redisClientQueue.poll();
+			InitThreadFactory.THREAD_EXECUTOR.execute(client);
+		}
+		//启动redisClient队列检测
+		poolManager.init();
+		//初始化zookeeper对象连接池
+		 ZookeeperPoolManager.getInstance().init();
+		
 	}
 	
 }

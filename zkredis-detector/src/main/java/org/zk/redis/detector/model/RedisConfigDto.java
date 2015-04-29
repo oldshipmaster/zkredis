@@ -1,13 +1,16 @@
 package org.zk.redis.detector.model;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author captain.guo 
  * 每个redis连接信息实体
  */
-public class RedisConfigDto {
+public class RedisConfigDto implements Serializable{
+	private static final long serialVersionUID = -7603770150482950205L;
 	private String host;
-	private String port;
+	private Integer port;
 	private String username;
 	private String password;
 	/** master->M,slave->S **/
@@ -22,11 +25,13 @@ public class RedisConfigDto {
 		this.host = host;
 	}
 
-	public String getPort() {
+
+
+	public Integer getPort() {
 		return port;
 	}
 
-	public void setPort(String port) {
+	public void setPort(Integer port) {
 		this.port = port;
 	}
 

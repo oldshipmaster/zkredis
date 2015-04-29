@@ -7,6 +7,6 @@
 	</settings> -->
  
     <mappers>
-        <mapper resource="org/zkredis/detector/dao/mapper/RedisConfigMapper.xml"/>
+        <mapper resource="org/zk/redis/detector/dao/mapper/RedisConfigMapper.xml"/>
     </mappers>
 </configuration>

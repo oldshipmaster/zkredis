@@ -50,6 +50,6 @@
     <!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
     	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="org.zkredis.detector" />
+        <property name="basePackage" value="org.zk.redis.detector.dao" />
     </bean>
 </beans>
