@@ -77,7 +77,11 @@
     <servlet-name>spring-view</servlet-name>
     <url-pattern>/view/*</url-pattern>
   </servlet-mapping> -->
-
+	<servlet>
+		<servlet-name>initThreadServlet</servlet-name>
+		<servlet-class>org.zk.redis.detector.common.InitThreadServlet</servlet-class>
+		<load-on-startup>99</load-on-startup>
+	</servlet>
   
   <servlet>
     <servlet-name>DruidStatView</servlet-name>

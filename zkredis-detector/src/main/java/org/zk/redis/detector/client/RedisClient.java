@@ -25,6 +25,7 @@ public class RedisClient implements Runnable {
 	private String password;
 	private String redismode;
 	private String status;
+	private Jedis client;
 
 
 	public RedisClient(String host, int port,String username,String password,String redismode,String status) {
@@ -43,17 +44,18 @@ public class RedisClient implements Runnable {
 		while (stop) {
 			try {
 				logger.debug("stop--------->" + stop);
-
+				 client = pool.getResource();
 				long start = System.currentTimeMillis();
 				logger.debug("host--{}--port--{}--start--{}", host, port);
-				Jedis client = pool.getResource();
+				
+				logger.debug("redis---active--{}", pool.getNumActive());
+			
 				String result = client.ping();
 
 				Thread.sleep(5000);
 				long end = System.currentTimeMillis();
-				logger.debug("host--{}--port--{}--end--{}----->{}------{}",host, port, (end - start), result,
-						RedisClientPoolManager.redisClientQueue.size());
-
+				logger.debug("host--{}--port--{}--end--{}----->{}------{}----{}",host, port, (end - start), result,
+						RedisClientPoolManager.redisClientQueue.size(),this.failTimes);
 			} catch (InterruptedException e) {
 				this.failTimes++;
 				logger.debug(e.getMessage(), e);
@@ -61,6 +63,7 @@ public class RedisClient implements Runnable {
 				this.failTimes++;
 				logger.debug(e.getMessage(), e);
 			} finally {
+				pool.returnResource(client);
 				RedisClientPoolManager.redisClientQueue.offer(this);
 				logger.debug("finally---------->{}"
 						+ RedisClientPoolManager.redisClientQueue.size());
